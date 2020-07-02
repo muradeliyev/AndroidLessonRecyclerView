@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/item_chat_default_margin"
+    app:cardElevation="10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_view_image_container"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="@dimen/item_chat_default_margin"
+            app:cardCornerRadius="50dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0"
+            app:layout_constraintWidth_percent="0.1">
+
+            <ImageView
+                android:id="@+id/image_view_profile"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/android" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/text_view_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/item_chat_default_margin"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/item_chat_name_text_size"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/card_view_image_container"
+            app:layout_constraintTop_toTopOf="@id/card_view_image_container" />
+
+        <TextView
+            android:id="@+id/text_view_description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/item_chat_text_between_margin"
+            android:layout_marginBottom="10dp"
+            android:ellipsize="marquee"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="@dimen/item_chat_description_text_size"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/text_view_name"
+            app:layout_constraintStart_toStartOf="@id/text_view_name"
+            app:layout_constraintTop_toBottomOf="@id/text_view_name"
+            app:layout_constraintVertical_bias="0"
+            android:singleLine="true" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
